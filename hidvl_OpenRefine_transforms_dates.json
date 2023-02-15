@@ -1,0 +1,28 @@
+[
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Date_of_Production",
+    "expression": "grel:value.smartSplit()[1]",
+    "onError": "set-to-blank",
+    "newColumnName": "Year_of_Production",
+    "columnInsertIndex": 5,
+    "description": "Create column Year_of_Production at index 5 based on column Date_of_Production using expression grel:value.smartSplit()[1]"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Date_of_Production",
+    "expression": "grel:value.match(/(.*), (.*)/).reverse().join(\" \")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Date_of_Production using expression grel:value.match(/(.*), (.*)/).reverse().join(\" \")"
+  }
+]
