@@ -1,0 +1,28 @@
+[
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "Worktypes",
+    "expression": "grel:value.replace(\",\",\"|\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Worktypes using expression grel:value.replace(\",\",\"|\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "Subjects_653",
+    "expression": "grel:value.replace(\"|,\",\"|\").chomp(\"|\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Subjects_653 using expression grel:value.replace(\"|,\",\"|\").chomp(\"|\")"
+  }
+]
