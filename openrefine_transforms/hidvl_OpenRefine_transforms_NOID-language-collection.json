@@ -43,18 +43,5 @@
     "repeat": false,
     "repeatCount": 10,
     "description": "Text transform on cells in column Series_Title using expression grel:value + \" collection\""
-  },
-  {
-    "op": "core/text-transform",
-    "engineConfig": {
-      "facets": [],
-      "mode": "row-based"
-    },
-    "columnName": "Meeting_Information",
-    "expression": "grel:cells[\"Series_Title\"].value",
-    "onError": "keep-original",
-    "repeat": false,
-    "repeatCount": 10,
-    "description": "Text transform on cells in column Meeting_Information using expression grel:cells[\"Series_Title\"].value"
   }
 ]
