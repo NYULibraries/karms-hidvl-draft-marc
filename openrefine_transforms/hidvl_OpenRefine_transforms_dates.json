@@ -24,5 +24,5 @@
     "newColumnName": "Year_of_Production",
     "columnInsertIndex": 5,
     "description": "Create column Year_of_Production at index 5 based on column Date_of_Production using expression grel:value.smartSplit()[1]"
-  },
+  }
 ]
